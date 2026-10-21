@@ -1,13 +1,13 @@
 # 공감 적산 Windows 프로그램(exe) 빌드 — Codex 작업 지시서
 
-이 폴더는 오프라인 HTML(공감적산_오프라인_v0.5.html)을 Tauri v2로 포장한 Windows 데스크톱 프로젝트다.
+이 폴더는 오프라인 HTML(공감적산_오프라인_v0.6.html)을 Tauri v2로 포장한 Windows 데스크톱 프로젝트다.
 화면·계산은 HTML 그대로이고, 데스크톱에서만 다음이 추가된다(`offline-src/desktop.js`).
 - 작업 파일·엑셀·CSV 저장 시 Windows '다른 이름으로 저장' 창 → 지정한 경로에 실제 저장(임시 파일에 쓴 뒤 교체)
 - 작업 파일을 저장/열면 그 파일에 2초 간격으로 자동 저장(구버전 파일을 열었을 때는 원본 보호를 위해 자동 저장 안 함)
 - 엑셀 저장 후 바로 열기
 
 ## 0. 작업 위치
-압축을 푼 `공감적산_v0.5_인계` 폴더에서 PowerShell을 연다. 이하 명령은 `desktop` 폴더 기준.
+압축을 푼 `공감적산_v0.6_인계` 폴더에서 PowerShell을 연다. 이하 명령은 `desktop` 폴더 기준.
 
 ## 1. 처음 한 번: 개발 도구 설치 (관리자 권한 PowerShell, 20~30분)
 ```powershell
@@ -33,11 +33,11 @@ npm run build
 처음 빌드는 러스트 라이브러리를 받아 컴파일하느라 5~15분 걸린다.
 
 결과물:
-- 설치 파일: `desktop\src-tauri\target\release\bundle\nsis\GonggamJeoksan_0.5.0_x64-setup.exe` (사용자 계정 설치, 관리자 권한 불필요)
+- 설치 파일: `desktop\src-tauri\target\release\bundle\nsis\GonggamJeoksan_0.6.0_x64-setup.exe` (사용자 계정 설치, 관리자 권한 불필요)
 - 단독 실행 파일: `desktop\src-tauri\target\release\GonggamJeoksan.exe` (WebView2가 있는 PC에서 바로 실행)
 
 ## 3. 확인 (exe 실행 후 직접 클릭)
-1. 창 제목 '공감 적산', 내역서 화면이 v0.5 HTML과 같게 보이는지.
+1. 창 제목 '공감 적산', 내역서 화면이 v0.6 HTML과 같게 보이는지.
 2. '작업 파일 저장' → 저장 창 → 바탕화면에 저장 → 창 제목에 파일 이름, 오른쪽 위 '자동 저장: …'.
 3. 수량 하나 변경 → 2~3초 뒤 '자동 저장됨' → 프로그램 종료 후 다시 실행 → '작업 열기'로 그 파일 → 바뀐 수량 유지.
 4. '엑셀(XLSX) 내보내기' → 저장 → '지금 엑셀로 열까요?' 확인 → 엑셀이 열리고 8개 시트.
