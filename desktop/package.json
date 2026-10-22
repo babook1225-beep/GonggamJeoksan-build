@@ -1,7 +1,7 @@
 {
   "name": "gonggam-desktop",
   "private": true,
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "공감 적산 오프라인 — Windows 데스크톱(Tauri) 포장",
   "scripts": {
     "prepare-dist": "node scripts/prepare-dist.mjs",

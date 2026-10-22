@@ -1,6 +1,6 @@
 [package]
 name = "gonggam"
-version = "0.6.0"
+version = "0.7.0"
 description = "공감 적산 오프라인"
 edition = "2021"
 
